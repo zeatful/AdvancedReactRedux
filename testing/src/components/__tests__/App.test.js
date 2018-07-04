@@ -4,6 +4,16 @@ import App from 'components/App';
 import CommentBox from 'components/CommentBox';
 import CommentList from 'components/CommentList';
 
+/*
+    Enzyme API Render Options
+    + Static
+        render the given component and return plain html
+    + Shallow
+        render just the given component and none of its children
+   +  Full DOM
+        render the component and all of its children + let us modify it afterwards
+*/
+
 let wrapped;
 
 beforeEach(() => {
