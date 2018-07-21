@@ -7,10 +7,7 @@ import reducers from 'reducers';
 // wrapped provider setup in a stateless component for easier testing
 export default ({ children, initialState = {} }) => {
     const store = createStore(reducers, initialState, applyMiddleware(reduxPromise));
-    return (
-        // initialState allows an optional initial state, IE: For testing    
-        <Provider store={store}>
-            {children}
-        </Provider>
-    );
+    
+    // initialState allows an optional initial state, IE: For testing    
+    return <Provider store={store}>{children}</Provider>;
 };

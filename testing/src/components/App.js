@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import CommentBox from 'components/CommentBox';
 import CommentList from 'components/CommentList';
@@ -9,5 +9,5 @@ export default () => {
             <CommentBox />
             <CommentList />
         </div>
-    )
+        );
 }
