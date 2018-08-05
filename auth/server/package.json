@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "babel-node":"babel-node --presets es2015,stage-2",
-    "start": "nodemon --exec npm run babel-node -- ./index.js",
-    "build":"babel src -d dist",
+    "dev": "nodemon npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

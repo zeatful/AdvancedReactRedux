@@ -1,8 +1,9 @@
-import express from 'express';
-import http from 'http';
-import bodyParser from 'body-parser';
-import morgan from 'morgan';
-import router from './router.mjs';
+const express = require('express');
+const http = require( 'http');
+const bodyParser = require( 'body-parser');
+const morgan = require( 'morgan');
+const router = require('./router.js');
+const mongoose = require( 'mongoose');
 
 const app = express();
 
@@ -10,6 +11,8 @@ const app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json({type: '*/*'}));
 router(app);
+
+mongoose.connect('mongodb://localhost:27017/auth', { useNewUrlParser: true });
 
 // Server steup
 const port = process.env.PORT || 3000;
