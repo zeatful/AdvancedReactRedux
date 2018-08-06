@@ -2,7 +2,7 @@ const jwt = require('jwt-simple');
 const User = require('../models/user');
 const config = require('../config');
 
-function tokenForUser(user) {
+function tokenForUser(user){
     const timestamp = new Date().getTime();
     // sub = subject property, who is this about?
     // iat = issued at time
